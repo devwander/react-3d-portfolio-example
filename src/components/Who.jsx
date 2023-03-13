@@ -31,7 +31,7 @@ const Right = styled.div`
 `
 
 const Title = styled.h1`
-  font-size: 64px;
+  font-size: 46px;
 `
  
 const WhatWeDo = styled.div`
