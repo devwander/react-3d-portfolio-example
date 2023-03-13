@@ -7,7 +7,7 @@ const Section = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding: 100px;
+  padding: 0 100px;
 `
 
 const Container = styled.div`
