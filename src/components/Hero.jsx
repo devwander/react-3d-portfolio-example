@@ -80,7 +80,7 @@ const Img = styled.img`
 
     @keyframes animate {
         to {
-            transform: translateY(20px);
+            transform: translateY(15px);
         }
     }
 `
