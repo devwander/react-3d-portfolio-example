@@ -1,5 +1,10 @@
-import React from "react"
+import React, { useState } from "react"
 import styled from "styled-components"
+import Development from "./Development"
+import Illustration from "./Illustration"
+import ProductDesign from "./ProductDesign"
+import SocialMedia from "./SocialMedia"
+import WebDesign from "./WebDesign"
 
 const data = [
   "Web Design",
@@ -13,7 +18,11 @@ const Section = styled.div`
   height: 100vh;
   scroll-snap-align: center;
   display: flex;
-  justify-content: center; 
+  justify-content: center;
+  position: relative;
+  color: black;
+  font-size: 14px;
+  font-weight: 300;
 `
 
 const Container = styled.div`
@@ -72,20 +81,29 @@ const Right = styled.div`
 `
 
 const Works = () => {
-    return (
-        <Section>
-          <Container>
-            <Left>
-              <List>
-                {data.map((item, i) => (
-                  <ListItem key={i} text={item}>{item}</ListItem>
-                ))}
-              </List>
-            </Left>
-            <Right>{/* 3d model */}</Right>
-          </Container>
-        </Section>
-    )
+  const [work, setWork] = useState("Web Design")
+
+  return (
+      <Section>
+        <Container>
+          <Left>
+            <List>
+              {data.map((item, i) => (
+                <ListItem key={i} text={item} onClick={() => setWork(item)}>{item}</ListItem>
+              ))}
+            </List>
+          </Left>
+          <Right>
+            { work === "Web Design" ? (<WebDesign />) :
+              work === "Development" ? (<Development />) :
+              work === "Illustration" ? (<Illustration />) :
+              work === "Product Design" ? (<ProductDesign />) :
+              (<SocialMedia />)
+            }
+          </Right>
+        </Container>
+      </Section>
+  )
 }
 
 export default Works
