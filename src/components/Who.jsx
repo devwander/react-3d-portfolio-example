@@ -11,18 +11,32 @@ const Section = styled.div`
   flex-direction: column;
   justify-content: center;
   padding: 0 100px;
+
+  
+  @media only screen and (max-width: 768px) {
+    padding: 0;
+  }
 `
 
 const Container = styled.div`
   height: 100vh;
   scroll-snap-align: center;
-  widht: 75vw;
+  width: 75vw;
   display: flex;
   justify-content: space-between;
+
+  @media only screen and (max-width: 768px) {
+    width: 100%;
+  }
 `
 
 const Left = styled.div`
   flex: 1;
+
+  
+  @media only screen and (max-width: 768px) {
+    display: none;
+  }
 `
 
 const Right = styled.div`
@@ -31,10 +45,16 @@ const Right = styled.div`
   flex-direction: column;
   justify-content: center;
   gap: 20px;
+
+  
+  @media only screen and (max-width: 768px) {
+    align-items: center;
+    text-align: center;
+  }
 `
 
 const Title = styled.h1`
-  font-size: 46px;
+  font-size: 46px
 `
  
 const WhatWeDo = styled.div`
@@ -69,7 +89,7 @@ const Button = styled.button`
 
 const Who = () => {
     return (
-        <Section>
+        <Section id="studio">
             <Container>
                 <Left>
                   <Canvas camera={{fov: 25, position: [5, 5, 5]}}>

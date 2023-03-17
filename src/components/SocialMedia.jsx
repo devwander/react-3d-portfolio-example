@@ -14,6 +14,14 @@ const Desc = styled.div`
     right: 100px;
     position: absolute;
     text-align: justify;
+
+    @media only screen and (max-width: 768px) {
+        top: -75px;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        margin: auto;
+    }
 `
 
 const SocialMedia = () => {

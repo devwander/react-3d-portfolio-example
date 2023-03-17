@@ -29,6 +29,12 @@ const Container = styled.div`
   width: 75vw;
   display: flex;
   justify-content: space-between;
+
+  
+  @media only screen and (max-width: 768px) {
+    flex-direction: column;
+    width: 60vw;
+  }
 `
 
 const Left = styled.div`
@@ -36,6 +42,14 @@ const Left = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
+
+  
+  @media only screen and (max-width: 768px) {
+    padding: 0 20px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
 `
 
 const List = styled.ul`
@@ -51,6 +65,13 @@ const ListItem = styled.li`
   color: transparent;
   -webkit-text-stroke: 0.5px white;
   position: relative;
+
+  
+  @media only screen and (max-width: 768px) {
+    font-size: 24px;
+    color: white;
+    -webkit-text-stroke: 0px;
+  }
 
   ::after {
     content: "${(props) => props.text}";
@@ -84,7 +105,7 @@ const Works = () => {
   const [work, setWork] = useState("Web Design")
 
   return (
-      <Section>
+      <Section id="works">
         <Container>
           <Left>
             <List>

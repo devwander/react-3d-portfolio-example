@@ -4,6 +4,10 @@ import styled from "styled-components"
 const Section = styled.div`
     display: flex;
     justify-content: center;
+
+    @media only screen and (max-width: 768px) {
+        width: 100%;
+    }
 `
 
 const Container = styled.div`
@@ -13,9 +17,9 @@ const Container = styled.div`
     align-items: center;
     padding: 10px 0;
 
-    @media (max-width: 700px) {
-        width: 90vw;
-        flex-direction: column;
+    @media only screen and (max-width: 768px) {
+        width: 100%;
+        padding: 10px;
     }
 `
 
@@ -29,11 +33,6 @@ const Icons = styled.div`
     display: flex;
     align-items: center;
     gap: 20px;
-
-    @media (max-width: 700px) {
-        padding-top: 20px;
-        scale: 0.8;
-    }
 `
 
 const Logo = styled.img`
@@ -44,6 +43,10 @@ const List = styled.ul`
     display: flex;
     gap: 20px;
     list-style: none;
+
+    @media only screen and (max-width: 768px) {
+        display: none;
+    }
 `
 
 const ListItem = styled.li`
@@ -65,7 +68,10 @@ const Button = styled.button`
     cursor: pointer;
 `
 
-
+const Link = styled.a`
+    text-decoration: none;
+    color: white;
+`
 
 const Navbar = () => {
     return (
@@ -74,10 +80,10 @@ const Navbar = () => {
                 <Links>
                     <Logo src="./img/logo.png" />
                     <List>
-                        <ListItem>Home</ListItem>
-                        <ListItem>Studio</ListItem>
-                        <ListItem>Works</ListItem>
-                        <ListItem>Contact</ListItem>
+                        <ListItem><Link href="#home">Home</Link></ListItem>
+                        <ListItem><Link href="#studio">Studio</Link></ListItem>
+                        <ListItem><Link href="#works">Works</Link></ListItem>
+                        <ListItem><Link href="#contact">Contact</Link></ListItem>
                     </List>
                 </Links>
                 <Icons>
