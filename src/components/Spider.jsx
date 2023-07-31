@@ -7,24 +7,59 @@ Source: https://sketchfab.com/3d-models/spider-mars-bot-96cf911befe74803b6cce68c
 Title: Spider mars bot
 */
 
-import React, { useRef } from 'react'
-import { useGLTF } from '@react-three/drei'
+import React, { useRef } from "react";
+import { useGLTF } from "@react-three/drei";
 
 export default function Model(props) {
-  const { nodes, materials } = useGLTF('./3ds/spider-transformed.glb')
+  const { nodes, materials } = useGLTF("./3ds/spider-transformed.glb");
   return (
     <group {...props} dispose={null}>
       <group scale={0.01}>
-        <mesh geometry={nodes.body_Texture_0.geometry} material={materials.Texture} rotation={[-Math.PI / 2, 0, 0]} scale={100} />
-        <mesh geometry={nodes.Head_Texture_0.geometry} material={materials.Texture} rotation={[-Math.PI / 2, 0, 0]} scale={100} />
-        <mesh geometry={nodes.legg_000_Texture_0.geometry} material={materials.Texture} rotation={[-Math.PI / 2, 0, 0]} scale={100} />
-        <mesh geometry={nodes.legg_003_Texture_0.geometry} material={materials.Texture} rotation={[-Math.PI / 2, 0, 0]} scale={100} />
-        <mesh geometry={nodes.legg_004_Texture_0.geometry} material={materials.Texture} rotation={[-Math.PI / 2, 0, 0]} scale={100} />
-        <mesh geometry={nodes.legg_001_Texture_0.geometry} material={materials.Texture} rotation={[-Math.PI / 2, 0, 0]} scale={100} />
-        <mesh geometry={nodes.legg_002_Texture_0.geometry} material={materials.Texture} rotation={[-Math.PI / 2, 0, 0]} scale={100} />
+        <mesh
+          geometry={nodes.body_Texture_0.geometry}
+          material={materials.Texture}
+          rotation={[-Math.PI / 2, 0, 0]}
+          scale={100}
+        />
+        <mesh
+          geometry={nodes.Head_Texture_0.geometry}
+          material={materials.Texture}
+          rotation={[-Math.PI / 2, 0, 0]}
+          scale={100}
+        />
+        <mesh
+          geometry={nodes.legg_000_Texture_0.geometry}
+          material={materials.Texture}
+          rotation={[-Math.PI / 2, 0, 0]}
+          scale={100}
+        />
+        <mesh
+          geometry={nodes.legg_003_Texture_0.geometry}
+          material={materials.Texture}
+          rotation={[-Math.PI / 2, 0, 0]}
+          scale={100}
+        />
+        <mesh
+          geometry={nodes.legg_004_Texture_0.geometry}
+          material={materials.Texture}
+          rotation={[-Math.PI / 2, 0, 0]}
+          scale={100}
+        />
+        <mesh
+          geometry={nodes.legg_001_Texture_0.geometry}
+          material={materials.Texture}
+          rotation={[-Math.PI / 2, 0, 0]}
+          scale={100}
+        />
+        <mesh
+          geometry={nodes.legg_002_Texture_0.geometry}
+          material={materials.Texture}
+          rotation={[-Math.PI / 2, 0, 0]}
+          scale={100}
+        />
       </group>
     </group>
-  )
+  );
 }
 
-useGLTF.preload('./3ds/spider-transformed.glb')
+useGLTF.preload("./3ds/spider-transformed.glb");

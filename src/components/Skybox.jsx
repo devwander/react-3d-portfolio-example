@@ -7,16 +7,20 @@ Source: https://sketchfab.com/3d-models/skybox-cyber-zoom-f0c47e1c007747a08fa654
 Title: Skybox Cyber Zoom
 */
 
-import React, { useRef } from 'react'
-import { useGLTF } from '@react-three/drei'
+import React, { useRef } from "react";
+import { useGLTF } from "@react-three/drei";
 
 export default function Model(props) {
-  const { nodes, materials } = useGLTF('./3ds/skybox-transformed.glb')
+  const { nodes, materials } = useGLTF("./3ds/skybox-transformed.glb");
   return (
     <group {...props} dispose={null}>
-      <mesh geometry={nodes.Object_4.geometry} material={materials.Skybox_mat} rotation={[Math.PI / 2, 0, 0]} />
+      <mesh
+        geometry={nodes.Object_4.geometry}
+        material={materials.Skybox_mat}
+        rotation={[Math.PI / 2, 0, 0]}
+      />
     </group>
-  )
+  );
 }
 
-useGLTF.preload('./3ds/skybox-transformed.glb')
+useGLTF.preload("./3ds/skybox-transformed.glb");

@@ -7,11 +7,11 @@ Source: https://sketchfab.com/3d-models/f-14-tomcat-top-gun-gear-up-downloadable
 Title: F-14 Tomcat Top Gun (Gear UP) Downloadable
 */
 
-import React, { useRef } from 'react'
-import { useGLTF } from '@react-three/drei'
+import React, { useRef } from "react";
+import { useGLTF } from "@react-three/drei";
 
 export default function Model(props) {
-  const { nodes, materials } = useGLTF('./3ds/plane-transformed.glb')
+  const { nodes, materials } = useGLTF("./3ds/plane-transformed.glb");
   return (
     <group {...props} dispose={null}>
       <group position={[0, 64.37, 123.76]} rotation={[-Math.PI, 0, 0]}>
@@ -22,7 +22,7 @@ export default function Model(props) {
         <mesh geometry={nodes.Object_6.geometry} material={materials.White_1} />
       </group>
     </group>
-  )
+  );
 }
 
-useGLTF.preload('./3ds/plane-transformed.glb')
+useGLTF.preload("./3ds/plane-transformed.glb");
